@@ -1,0 +1,1 @@
+#GitHub Pages static website for Isaac Schultz
