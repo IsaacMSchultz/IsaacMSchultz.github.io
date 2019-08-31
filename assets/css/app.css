@@ -5,13 +5,8 @@ body {
 
 /* Used to show my background photo over the whole website. Scales to fit the window! */
 .background-image {
-  background-image: url("/assets/images/IMG_20170710_173108\ \(2\).jpg");
-  background-color: #cccccc;
-  /* height: 500px; */
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("/assets/images/Seattle1.jpg")no-repeat center center;
   background-size: cover;
-  position: initial;
 }
 
 /* Used to make text center in the middle of whatever element it is in */
@@ -22,4 +17,22 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.view {
+  margin-top: 56px;
+}
+
+.cover-text {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+html,
+body,
+header,
+.view {
+    height: 100%;
 }
