@@ -11,7 +11,7 @@
     <base target="_top">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaac Schultz</title>
+    <title>Isaac Schultz - IN DEVELOPMENT</title>
 
     <!-- Import External stylesheets and libraries using 'CDN' (content delivery network) links: -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -43,11 +43,11 @@
     <header>
         <nav class="nav" id="navbar"></nav>
         <div class="background-image view">
-            <div class="full-bg-img cover-text">
+            <div class="full-bg-img cover-text-large">
                 <div class="flex-center">
                     <div class="container">
                         <div class="text-center">
-                            <h1 class="display-4 font-weight-normal">Hi, my name is Isaac</h1>
+                            <h1 class="display-4 font-weight-normal">Hi, my name is Isaac Schultz</h1>
                             <p class="lead font-weight-normal">I am a software engineer</p>
                             <br />
                             <a class="btn btn-dark" href="#">Check out my resume</a>
@@ -57,44 +57,42 @@
             </div>
         </div>
     </header>
-    <footer class="page-footer font-small blue-grey lighten-5">
-        <div class="bg-dark text-white">
-            <div class="container">
-                <div class="row py-4 d-flex align-items-center">
-                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                        <h6 class="mb-0">This is a test, I should put something cool here</h6>
+    <footer class="page-footer text-white bg-dark darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 text-center">
+                        <a class="linkedin">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="github">
+                            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-7 text-center text-md-right">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center text-md-left mt-5">
-            <div class="row mt-3 dark-grey-text">
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-                    <h6 class="text-uppercase font-weight-bold">Testing testing</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fab fa-linkedin-in white-text mr-4"></i>
-                    </p>
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i>Isaac.Schultz98@gmail.com
-                    </p>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 <script>
     // load the navbar
     $("#navbar").load("/html/navbar.html");
+
+    // Call the resize window function when window is resized.
+    $(window).resize(CenterGreetingText);
+
+    // Changes the style of text depending on the size of the window
+    function CenterGreetingText() {
+        // If the window is scaled to mobile size, change style to small text
+        if ($(window).width() <= 640) {
+            $(".cover-text-large").toggleClass("cover-text-large cover-text-smol")
+        }
+        // Otherwise, use the large text
+        else {
+            $(".cover-text-smol").toggleClass("cover-text-large cover-text-smol")
+        }
+    }
 </script>
 
 </html>
